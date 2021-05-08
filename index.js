@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
 const { fstat } = require('node:fs');
+const generateMarkdown = require('./Develop/utils/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
 
@@ -9,7 +11,8 @@ const questions = () =>
     {
         type: "input",
         name: "author",
-        message: "What is the author's name?"
+        message: "What is the author's name?",
+        validate
     },
     {
         type: "input",
@@ -46,14 +49,15 @@ const questions = () =>
 function writeToFile(fileName, data) {
     fs.writeToFile(fileName, data, err => {
         if (err) {
-            return console.log (err);
+            return console.log(err);
         }
-    
-        console.log('Your markdown file has been created')
 
+    console.log('Your markdown file has been created')
     });
 
 }
+
+
 
 
 // TODO: Create a function to initialize app
