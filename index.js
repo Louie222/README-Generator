@@ -13,30 +13,29 @@ function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
-      name: "author",
-      message: "What is the author's name?",
-      validate: function (answer) {
-        if (answer.length < 1) {
+      name: "title",
+      message: "What is your project title?",
+      validate: function (answers) {
+        if (answers.length < 1) {
           return console.log("You must enter your name.");
         }
         return true;
-      },
+    }
     },
-
+    {
+      type: "input",
+      name: "author",
+      message: "What is the author's name?",
+    },
     {
     type: "input",
     name: "username",
-    message: "What is your GitHub username?"
+    message: "What is your GitHub username?",
     },
     {
     type: "input",
     name: "email",
     message: "What is your email address?"
-    },
-    {
-    type: "input",
-    name: "title",
-    message: "What is your project title?"
     },
     {
     type: "input",
@@ -52,7 +51,7 @@ function promptUser() {
     }
   ])
   .then(answers => {
-      writeToFile("answersText.md", answers.author)
+      writeToFile("answersText.md", generateMarkdown(answers))
       console.log(answers)
   })
 }
@@ -71,10 +70,9 @@ function writeToFile(fileName, data) {
   });
 }
 
-
-
 // TODO: Create a function to initialize app
 //function init() {}
 
 // Function call to initialize app
 // function init
+
