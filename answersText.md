@@ -1,12 +1,14 @@
-# README Generator
-
+# 
 ## Description
-README Generator
+Kl
 ## Table of Contents
 //google the code for this
-## Installation
-//
+## Installation 
+
+   To install this application clone the repository from GitHub: https://github.com/Louie222 
 ## Usage
+
+  To use this program, open your terminal and type npm start
 ## License
 ## Contributing
 ## Tests 

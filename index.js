@@ -24,13 +24,13 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "author",
-      message: "What is the author's name?",
+      name: "installation",
+      message: "To install this application clone the repository from GitHub: https://github.com/Louie222, press ''enter' to confirm",
     },
     {
     type: "input",
-    name: "username",
-    message: "What is your GitHub username?",
+    name: "usage",
+    message: "To use this program, open your terminal and type npm start, press 'enter' to confirm",
     },
     {
     type: "input",

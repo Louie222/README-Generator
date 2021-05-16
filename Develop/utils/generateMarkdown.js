@@ -13,15 +13,17 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   console.log(answers)
-  return `# ${answers.title}
-
+  return `# ${answers.title, answers.installation, answers.usage}
 ## Description
 ${answers.title}
 ## Table of Contents
 //google the code for this
-## Installation
-//
+## Installation 
+${answers.installation}
+   To install this application clone the repository from GitHub: https://github.com/Louie222 
 ## Usage
+${answers.usage}
+  To use this program, open your terminal and type 'npm start'
 ## License
 ## Contributing
 ## Tests 
