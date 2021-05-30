@@ -25,7 +25,7 @@ function promptUser() {
     {
       type: "input",
       name: "installation",
-      message: "To install this application clone the repository from GitHub: https://github.com/Louie222, press ''enter' to confirm",
+      message: "To install this application clone the repository from GitHub: https://github.com/Louie222, press 'enter' to confirm",
     },
     {
     type: "input",
@@ -46,9 +46,23 @@ function promptUser() {
     type: "list",
     name: "license",
     message: "What kind of license should your project have?",
-    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "B"]
-
-    }
+    choices: ["MIT", "GPLv3"]
+    },
+    {
+    type: "input",
+    name: "contributing",
+    message: "To install dependencies, open your terminal and type 'npm install', press 'enter' to confirm", 
+    },
+    {
+    type: "input",
+    name: "tests",
+    message: "To run tests, open your terminal and type 'npm run test', press 'enter' to confirm", 
+    },
+    {
+    type: "input",
+    name: "questions",
+    message: "What is your GitHub username?", 
+    },
   ])
   .then(answers => {
       writeToFile("answersText.md", generateMarkdown(answers))
