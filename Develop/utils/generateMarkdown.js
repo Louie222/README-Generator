@@ -24,9 +24,8 @@ function generateMarkdown(answers) {
   } 
 
   console.log(answers)
-  return `# ${answers.title, answers.description, answers.installation, answers.usage, answers.contributing, answers.tests, answers.questions}
-## Description
-${answers.title}
+  return `# ${answers.title, answers.description, answers.installation, answers.usage, answers.email, answers.contributing, answers.tests, answers.questions}
+
 
 # Table of Contents
 1. [Description](#description)
@@ -37,6 +36,9 @@ ${answers.title}
 7. [Contributing](#contributing)
 8. [Tests](#tests)
 9. [Questions](#questions)
+
+## Tile
+${answers.title}
 
 ## Description
 ${answers.description}
